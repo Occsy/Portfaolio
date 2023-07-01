@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    text-align:left; 
+  }
+  
+  .text {
+    max-width: 768px;
+  }
+  
+  .typewriter-start {
+    display: inline-flex;
+  }
+  
+  #my-text {
+    font-family: 'Inconsolata', monospace;
+    white-space: pre;
+    color: var(--white-code);
+    height: 100;
+    position: absolute;
+    z-index: -1;
+    
+  }
+  
+.typewriter::after {
+    display: inline-block;
+    content: ".";
+    width: 0;
+    color: transparent;  
+  }

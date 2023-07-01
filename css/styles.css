@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --darkmode-primary: rgb(1, 0, 0);
+    --darkmode-secundary: rgb(36, 37, 36);
+    --lightmode-primary: rgb(243, 244, 244);
+    --lightmode-secundary: rgb(236, 233, 233);
+    --darmode-shadow: rgb(215, 215, 215);
+    --lightmode-shadow: rgb(101, 99, 99);
+    --white-code: rgb(255, 255, 255, 0.2);
+    --dark-code: rgb(0, 0, 0, 0.2);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow';
+}
+
+body {
+    min-height: 100%;
+    padding-top: 10px;
+    text-align: center;
+    background: linear-gradient(var(--darkmode-primary), var(--darkmode-secundary)) no-repeat;
+    background-attachment: fixed;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    margin-right: 1rem;
+}
+
+button {
+    text-decoration: none;
+    background: none;
+    font-size: 1rem;
+    border-style: none;
+}
+
+p,
+h4,
+button,
+footer {
+    color: var(--white);
+}
+
+p {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 10rem;
+    margin-bottom: 0;
+    transition: textshadow 3s ease-out;
+}
+
+p:hover {
+    text-shadow: 0 0 5px var(--darmode-shadow), 0 0 5px var(--darmode-shadow), 0 0 15px var(--darmode-shadow);
+}
+
+h4 {
+    display: inline-flex;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.items {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 1000px;
+    padding: 0;
+}
+
+.items a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 4rem;
+    color: var(--lightmode-secundary);
+    margin-top: 1.5rem;
+}
+
+.experience,
+.aboutme,
+.contact {
+    display: inline-block;
+}
+
+a:hover {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+a:focus,
+a:hover {
+    color: var(--white);
+}
+
+.underline {
+    color: var(--white);
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+}
+
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.6s ease-out;
+}
+
+.underline:hover:after {
+    transform: scale(1);
+    transform-origin: bottom left;
+}
+
+footer {
+    margin-top: 7.1rem;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.lightmode {
+    background: linear-gradient(var(--lightmode-primary), var(--lightmode-secundary)) no-repeat;
+    background-attachment: fixed;
+}
+
+.lightmode p,
+.lightmode h4,
+.lightmode button,
+.lightmode footer {
+    color: var(--black);
+}
+
+.lightmode #my-text {
+    z-index: -1;
+    color: var(--dark-code);
+}
+
+.lightmode p:hover {
+    text-shadow: 0 0 5px var(--lightmode-shadow), 0 0 5px var(--lightmode-shadow), 0 0 15px var(--lightmode-shadow);
+}
+
+.lightmode .items a {
+    color: var(--black);
+}
+
+.lightmode .underline:after {
+    background-color: var(--black);
+}
+
+.up .items {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    align-items: flex-end;
+    
+    /* background-color: aliceblue; */
+    
+}
+
+.up a {
+    text-align: left;
+    font-size: 1rem;
+}
