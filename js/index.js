@@ -1,9 +1,16 @@
 /*theme buttom */
-let themeresult;
-let theme = document.querySelector('.theme');
-function thememode() {
-    let background = document.querySelector('body');
-    background.classList.toggle('lightmode');   
-}
+let circle = document.querySelector("#circle");
+let container = document.querySelector(".button-container");
+let body = document.querySelector("body");
 
-theme.addEventListener('click', thememode);
+circle.addEventListener("click", ()=>{
+    circle.classList.toggle("lightmodebutton");
+    circle.setAttribute("style", "transition: transform 1s ease;");
+    container.classList.toggle("borders");
+    body.classList.toggle("lightmode");
+    body.setAttribute("style","transition: background 1s ease")
+    
+});
+
+
+

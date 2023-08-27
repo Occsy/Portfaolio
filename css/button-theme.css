@@ -1,0 +1,31 @@
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    border: 0.20rem solid;
+    border-color: white;
+    padding: 1px 5px;
+    margin: 0 auto;
+    width: 6rem;
+    height: 1.2rem;
+    position: fixed;
+    border-radius: 20px;
+}
+
+#circle {
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: white;
+    border-radius: 50%;
+}
+.lightmodebutton {
+    background-color: black !important;
+    transform: translateX(4.8rem);
+   
+}
+.color{
+    background-color: black;
+} 
+.borders {
+    border-color:black;
+}
